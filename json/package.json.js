@@ -29,9 +29,7 @@ module.exports = function dataForPackageJSON(scope) {
       'async': getDependencyVersion(frameworkPkg, 'async'),
       'bcryptjs': getDependencyVersion(frameworkPkg, 'bcryptjs'),
       'jsonwebtoken': getDependencyVersion(frameworkPkg, 'jsonwebtoken'),
-      'json-stringify-safe': getDependencyVersion(frameworkPkg, 'json-stringify-safe'),
       'lodash': getDependencyVersion(frameworkPkg, 'lodash'),
-      'strapi': strapiVersionDependency,
       'nodemailer': getDependencyVersion(frameworkPkg, 'nodemailer'),
       'passport-facebook': getDependencyVersion(frameworkPkg, 'passport-facebook'),
       'passport-github': getDependencyVersion(frameworkPkg, 'passport-github'),
@@ -41,6 +39,7 @@ module.exports = function dataForPackageJSON(scope) {
       'passport-twitter': getDependencyVersion(frameworkPkg, 'passport-twitter'),
       'sails-disk': getDependencyVersion(frameworkPkg, 'sails-disk'),
       'socket.io': getDependencyVersion(frameworkPkg, 'socket.io'),
+      'strapi': strapiVersionDependency,
       'waterline': getDependencyVersion(frameworkPkg, 'waterline')
     },
     'devDependencies': {
