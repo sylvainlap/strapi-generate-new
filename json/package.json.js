@@ -64,8 +64,8 @@ module.exports = function dataForPackageJSON(scope) {
       'url': scope.website || ''
     }],
     'engines': {
-      'node': '>= 4.0.0',
-      'npm': '>= 3.0.0'
+      'node': '>= 0.12.0',
+      'npm': '>= 2.0.0'
     },
     'license': scope.license || 'MIT'
   });
