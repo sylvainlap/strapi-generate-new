@@ -34,6 +34,7 @@
     "_": true
   },
   "studio": {
+    "enabled": true,
     "secretKey": ""
   }
 }
