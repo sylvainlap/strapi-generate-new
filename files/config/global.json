@@ -31,7 +31,8 @@
     "models": true,
     "strapi": true,
     "async": true,
-    "_": true
+    "_": true,
+    "graphql": true
   },
   "studio": {
     "enabled": true,
