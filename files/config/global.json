@@ -19,7 +19,6 @@
     "cookieName": "locale"
   },
   "prefix": "",
-  "supports": {},
   "blueprints": {
     "defaultLimit": 30,
     "populate": true
