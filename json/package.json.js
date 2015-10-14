@@ -28,6 +28,7 @@ module.exports = function dataForPackageJSON(scope) {
       'anchor': getDependencyVersion(frameworkPkg, 'anchor'),
       'async': getDependencyVersion(frameworkPkg, 'async'),
       'bcryptjs': getDependencyVersion(frameworkPkg, 'bcryptjs'),
+      'co-busboy': getDependencyVersion(frameworkPkg, 'co-busboy'),
       'jsonwebtoken': getDependencyVersion(frameworkPkg, 'jsonwebtoken'),
       'lodash': getDependencyVersion(frameworkPkg, 'lodash'),
       'nodemailer': getDependencyVersion(frameworkPkg, 'nodemailer'),
