@@ -50,6 +50,32 @@ module.exports = function dataForPackageJSON(scope) {
     },
     'users': {
       'jwtSecret': scope.jwtSecret
+    },
+    'smtp': {
+      'from': scope.name + '<no-reply@' + scope.name + '.com>',
+      'service': {
+        'name': '',
+        'user': '',
+        'pass': ''
+      }
+    },
+    'upload': {
+      'folder': 'public/upload',
+      'acceptedExtensions': ['*'],
+      'headers': {},
+      'highWaterMark': '',
+      'fileHwm': '',
+      'defCharset': '',
+      'preservePath': '',
+      'limits': {
+        'fieldNameSize': '',
+        'fieldSize': '',
+        'fields': '',
+        'fileSize': '',
+        'files': '',
+        'parts': '',
+        'headerPairs': ''
+      }
     }
   };
 };
