@@ -4,6 +4,10 @@
  * Module dependencies
  */
 
+// Node.js core.
+const fs = require('fs');
+const path = require('path');
+
 // Public node modules.
 const _ = require('lodash');
 
@@ -14,6 +18,7 @@ const _ = require('lodash');
 
 module.exports = function dataForPackageJSON(scope) {
   const frameworkPkg = scope.strapiPackageJSON || {};
+  const userPkg = JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', '..', 'strapi-generate-users', 'package.json'))) || {};
 
   // To determine the Strapi dependency to inject
   // in the newly created `package.json`.
@@ -25,19 +30,18 @@ module.exports = function dataForPackageJSON(scope) {
     'version': '0.1.0',
     'description': 'A Strapi application.',
     'dependencies': {
-      'anchor': getDependencyVersion(frameworkPkg, 'anchor'),
+      'anchor': getDependencyVersion(userPkg, 'anchor'),
       'async': getDependencyVersion(frameworkPkg, 'async'),
-      'bcryptjs': getDependencyVersion(frameworkPkg, 'bcryptjs'),
-      'co-busboy': getDependencyVersion(frameworkPkg, 'co-busboy'),
-      'jsonwebtoken': getDependencyVersion(frameworkPkg, 'jsonwebtoken'),
+      'bcryptjs': getDependencyVersion(userPkg, 'bcryptjs'),
+      'jsonwebtoken': getDependencyVersion(userPkg, 'jsonwebtoken'),
       'lodash': getDependencyVersion(frameworkPkg, 'lodash'),
-      'nodemailer': getDependencyVersion(frameworkPkg, 'nodemailer'),
-      'passport-facebook': getDependencyVersion(frameworkPkg, 'passport-facebook'),
-      'passport-github': getDependencyVersion(frameworkPkg, 'passport-github'),
-      'passport-google-oauth': getDependencyVersion(frameworkPkg, 'passport-google-oauth'),
-      'passport-linkedin': getDependencyVersion(frameworkPkg, 'passport-linkedin'),
-      'passport-local': getDependencyVersion(frameworkPkg, 'passport-local'),
-      'passport-twitter': getDependencyVersion(frameworkPkg, 'passport-twitter'),
+      'nodemailer': getDependencyVersion(userPkg, 'nodemailer'),
+      'passport-facebook': getDependencyVersion(userPkg, 'passport-facebook'),
+      'passport-github': getDependencyVersion(userPkg, 'passport-github'),
+      'passport-google-oauth': getDependencyVersion(userPkg, 'passport-google-oauth'),
+      'passport-linkedin': getDependencyVersion(userPkg, 'passport-linkedin'),
+      'passport-local': getDependencyVersion(userPkg, 'passport-local'),
+      'passport-twitter': getDependencyVersion(userPkg, 'passport-twitter'),
       'sails-disk': getDependencyVersion(frameworkPkg, 'sails-disk'),
       'socket.io': getDependencyVersion(frameworkPkg, 'socket.io'),
       'strapi': strapiVersionDependency,
