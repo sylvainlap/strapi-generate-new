@@ -19,6 +19,8 @@ const _ = require('lodash');
 module.exports = function dataForPackageJSON(scope) {
   const frameworkPkg = scope.strapiPackageJSON || {};
   const userPkg = JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', '..', 'strapi-generate-users', 'package.json'))) || {};
+  const uploadPkg = JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', '..', 'strapi-generate-upload', 'package.json'))) || {};
+  const emailPkg = JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', '..', 'strapi-generate-email', 'package.json'))) || {};
 
   // To determine the Strapi dependency to inject
   // in the newly created `package.json`.
@@ -33,9 +35,10 @@ module.exports = function dataForPackageJSON(scope) {
       'anchor': getDependencyVersion(userPkg, 'anchor'),
       'async': getDependencyVersion(frameworkPkg, 'async'),
       'bcryptjs': getDependencyVersion(userPkg, 'bcryptjs'),
+      'co-busboy': getDependencyVersion(uploadPkg, 'co-busboy'),
       'jsonwebtoken': getDependencyVersion(userPkg, 'jsonwebtoken'),
       'lodash': getDependencyVersion(frameworkPkg, 'lodash'),
-      'nodemailer': getDependencyVersion(userPkg, 'nodemailer'),
+      'nodemailer': getDependencyVersion(emailPkg, 'nodemailer'),
       'passport-facebook': getDependencyVersion(userPkg, 'passport-facebook'),
       'passport-github': getDependencyVersion(userPkg, 'passport-github'),
       'passport-google-oauth': getDependencyVersion(userPkg, 'passport-google-oauth'),
@@ -51,7 +54,9 @@ module.exports = function dataForPackageJSON(scope) {
       'strapi-generate': getDependencyVersion(frameworkPkg, 'strapi-generate'),
       'strapi-generate-admin': getDependencyVersion(frameworkPkg, 'strapi-generate-admin'),
       'strapi-generate-api': getDependencyVersion(frameworkPkg, 'strapi-generate-api'),
+      'strapi-generate-email': getDependencyVersion(frameworkPkg, 'strapi-generate-email'),
       'strapi-generate-new': getDependencyVersion(frameworkPkg, 'strapi-generate-new'),
+      'strapi-generate-upload': getDependencyVersion(frameworkPkg, 'strapi-generate-upload'),
       'strapi-generate-users': getDependencyVersion(frameworkPkg, 'strapi-generate-users')
     },
     'main': './server.js',
