@@ -52,7 +52,6 @@ module.exports = function dataForPackageJSON(scope) {
     },
     'devDependencies': {
       'strapi-generate': getDependencyVersion(frameworkPkg, 'strapi-generate'),
-      'strapi-generate-admin': getDependencyVersion(frameworkPkg, 'strapi-generate-admin'),
       'strapi-generate-api': getDependencyVersion(frameworkPkg, 'strapi-generate-api'),
       'strapi-generate-email': getDependencyVersion(frameworkPkg, 'strapi-generate-email'),
       'strapi-generate-new': getDependencyVersion(frameworkPkg, 'strapi-generate-new'),
