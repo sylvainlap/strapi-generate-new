@@ -24,6 +24,10 @@
     "defaultLimit": 30,
     "populate": true
   },
+  "graphql": {
+    "enabled": true,
+    "route": "/graphql"
+  },
   "smtp": {
     "from": "no-reply@your-service.com"
   },
