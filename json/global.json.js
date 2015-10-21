@@ -38,11 +38,16 @@ module.exports = function dataForPackageJSON(scope) {
       'defaultLimit': 30,
       'populate': true
     },
+    'graphql': {
+      'enabled': true,
+      'route': '/graphql'
+    },
     'globals': {
       'models': true,
       'strapi': true,
       'async': true,
-      '_': true
+      '_': true,
+      'graphql': true
     },
     'studio': {
       'enabled': true,
