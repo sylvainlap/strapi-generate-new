@@ -42,16 +42,16 @@ module.exports = function dataForPackageJSON(scope) {
       'enabled': true,
       'route': '/graphql'
     },
+    'studio': {
+      'enabled': true,
+      'secretKey': 'YOUR SECRET KEY HERE'
+    },
     'globals': {
       'models': true,
       'strapi': true,
       'async': true,
       '_': true,
       'graphql': true
-    },
-    'studio': {
-      'enabled': true,
-      'secretKey': ''
     },
     'users': {
       'jwtSecret': scope.jwtSecret
