@@ -1,13 +1,6 @@
 'use strict';
 
 /**
- * Module dependencies
- */
-
-// Public node modules.
-const _ = require('lodash');
-
-/**
  * Expose main global config.
  */
 
