@@ -45,7 +45,6 @@ module.exports = function dataForPackageJSON(scope) {
       'passport-linkedin': getDependencyVersion(userPkg, 'passport-linkedin'),
       'passport-local': getDependencyVersion(userPkg, 'passport-local'),
       'passport-twitter': getDependencyVersion(userPkg, 'passport-twitter'),
-      'regex': getDependencyVersion(userPkg, 'regex'),
       'sails-disk': getDependencyVersion(frameworkPkg, 'sails-disk'),
       'socket.io': getDependencyVersion(frameworkPkg, 'socket.io'),
       'strapi': strapiVersionDependency,
