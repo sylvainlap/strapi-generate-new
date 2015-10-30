@@ -39,6 +39,9 @@ module.exports = function dataForPackageJSON(scope) {
       'enabled': true,
       'secretKey': 'YOUR SECRET KEY HERE'
     },
+    'dahboard': {
+      'dashboardToken': scope.dashboardToken
+    },
     'globals': {
       'models': true,
       'strapi': true,
@@ -47,8 +50,7 @@ module.exports = function dataForPackageJSON(scope) {
       'graphql': true
     },
     'users': {
-      'jwtSecret': scope.jwtSecret,
-      'dashboardToken': scope.dashboardToken
+      'jwtSecret': scope.jwtSecret
     },
     'smtp': {
       'from': scope.name + '<no-reply@' + scope.name + '.com>',
