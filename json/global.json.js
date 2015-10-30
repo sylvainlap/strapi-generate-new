@@ -39,7 +39,8 @@ module.exports = function dataForPackageJSON(scope) {
       'enabled': true,
       'secretKey': 'YOUR SECRET KEY HERE'
     },
-    'dahboard': {
+    'dashboard': {
+      'enabled': true,
       'token': scope.dashboardToken
     },
     'globals': {
