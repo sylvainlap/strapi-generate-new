@@ -40,7 +40,7 @@ module.exports = function dataForPackageJSON(scope) {
       'secretKey': 'YOUR SECRET KEY HERE'
     },
     'dahboard': {
-      'dashboardToken': scope.dashboardToken
+      'token': scope.dashboardToken
     },
     'globals': {
       'models': true,
