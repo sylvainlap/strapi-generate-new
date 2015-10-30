@@ -47,7 +47,8 @@ module.exports = function dataForPackageJSON(scope) {
       'graphql': true
     },
     'users': {
-      'jwtSecret': scope.jwtSecret
+      'jwtSecret': scope.jwtSecret,
+      'dashboardToken': scope.dashboardToken
     },
     'smtp': {
       'from': scope.name + '<no-reply@' + scope.name + '.com>',
