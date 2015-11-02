@@ -34,7 +34,8 @@
     ],
     "headers": [
       "Content-Type",
-      "Authorization"
+      "Authorization",
+      "DashboardToken"
     ]
   },
   "ssl": false,
