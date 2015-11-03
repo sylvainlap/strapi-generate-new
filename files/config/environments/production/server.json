@@ -1,4 +1,5 @@
 {
+  "frontendUrl": "",
   "logger": true,
   "parser": {
     "encode": "utf-8",
@@ -10,5 +11,7 @@
         "application/x-javascript"
       ]
     }
-  }
+  },
+  "gzip": true,
+  "responseTime": true
 }
