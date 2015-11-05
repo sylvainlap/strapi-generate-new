@@ -39,6 +39,7 @@ module.exports = function dataForPackageJSON(scope) {
       'jsonwebtoken': getDependencyVersion(userPkg, 'jsonwebtoken'),
       'lodash': getDependencyVersion(frameworkPkg, 'lodash'),
       'nodemailer': getDependencyVersion(emailPkg, 'nodemailer'),
+      'purest': getDependencyVersion(userPkg, 'purest'),
       'sails-disk': getDependencyVersion(frameworkPkg, 'sails-disk'),
       'socket.io': getDependencyVersion(frameworkPkg, 'socket.io'),
       'strapi': strapiVersionDependency,
